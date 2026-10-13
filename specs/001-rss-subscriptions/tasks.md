@@ -16,10 +16,10 @@
 
 **Purpose**: Project initialization and core structure for the minimal MVP
 
-- [ ] T001 Create the backend and frontend project structure required by the implementation plan in backend/ and frontend/
-- [ ] T002 [P] Initialize the ASP.NET Core Web API project skeleton in backend/RSSFeedReader.Api/
-- [ ] T003 [P] Initialize the Blazor WebAssembly UI project skeleton in frontend/RSSFeedReader.UI/
-- [ ] T004 [P] Configure launch settings and API base URL alignment between backend/RSSFeedReader.Api/Properties/launchSettings.json and frontend/RSSFeedReader.UI/wwwroot/appsettings.json
+- [x] T001 Create the backend and frontend project structure required by the implementation plan in backend/ and frontend/
+- [x] T002 [P] Initialize the ASP.NET Core Web API project skeleton in backend/RSSFeedReader.Api/
+- [x] T003 [P] Initialize the Blazor WebAssembly UI project skeleton in frontend/RSSFeedReader.UI/
+- [x] T004 [P] Configure launch settings and API base URL alignment between backend/RSSFeedReader.Api/Properties/launchSettings.json and frontend/RSSFeedReader.UI/wwwroot/appsettings.json
 
 ---
 
@@ -29,11 +29,11 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Define the in-memory subscription model in backend/RSSFeedReader.Api/Models/Subscription.cs with fields for an identifier, the user-entered URL, and creation time
-- [ ] T006 [P] Implement the in-memory subscription store and list operations in backend/RSSFeedReader.Api/Services/SubscriptionService.cs
-- [ ] T007 [P] Add the basic URL validation helper in backend/RSSFeedReader.Api/Validation/UrlValidator.cs to reject empty, whitespace-only, malformed, and obviously invalid values with a clear message
-- [ ] T008 Implement the subscription API endpoints in backend/RSSFeedReader.Api/Controllers/SubscriptionsController.cs for listing and adding subscriptions
-- [ ] T009 Configure CORS and startup wiring in backend/RSSFeedReader.Api/Program.cs so the UI can call the API locally without expanding MVP scope
+- [x] T005 Define the in-memory subscription model in backend/RSSFeedReader.Api/Models/Subscription.cs with fields for an identifier, the user-entered URL, and creation time
+- [x] T006 [P] Implement the in-memory subscription store and list operations in backend/RSSFeedReader.Api/Services/SubscriptionService.cs
+- [x] T007 [P] Add the basic URL validation helper in backend/RSSFeedReader.Api/Validation/UrlValidator.cs to reject empty, whitespace-only, malformed, and obviously invalid values with a clear message
+- [x] T008 Implement the subscription API endpoints in backend/RSSFeedReader.Api/Controllers/SubscriptionsController.cs for listing and adding subscriptions
+- [x] T009 Configure CORS and startup wiring in backend/RSSFeedReader.Api/Program.cs so the UI can call the API locally without expanding MVP scope
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -47,18 +47,18 @@
 
 ### Tests for User Story 1 (MUST be written before implementation)
 
-- [ ] T010 [P] [US1] Add a .NET test for valid subscription creation in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts a valid URL is accepted and stored in memory
-- [ ] T011 [P] [US1] Add a .NET test for invalid URLs in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts empty, whitespace-only, malformed, and obviously invalid URLs are rejected without changing the list
-- [ ] T012 [P] [US1] Add a .NET test for GET/list behavior in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts the list returns accepted subscriptions in the current session
-- [ ] T013 [P] [US1] Add a .NET test for multiple subscriptions in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts multiple valid entries are preserved and remain in the current session list
+- [x] T010 [P] [US1] Add a .NET test for valid subscription creation in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts a valid URL is accepted and stored in memory
+- [x] T011 [P] [US1] Add a .NET test for invalid URLs in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts empty, whitespace-only, malformed, and obviously invalid URLs are rejected without changing the list
+- [x] T012 [P] [US1] Add a .NET test for GET/list behavior in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts the list returns accepted subscriptions in the current session
+- [x] T013 [P] [US1] Add a .NET test for multiple subscriptions in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts multiple valid entries are preserved and remain in the current session list
 
 ### Implementation for User Story 1
 
-- [ ] T014 [P] [US1] Create the subscription form and state management in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor
-- [ ] T015 [P] [US1] Add the frontend subscription client in frontend/RSSFeedReader.UI/Services/SubscriptionClient.cs to post URLs to POST /api/subscriptions
-- [ ] T016 [US1] Implement backend add-subscription logic in backend/RSSFeedReader.Api/Services/SubscriptionService.cs and backend/RSSFeedReader.Api/Controllers/SubscriptionsController.cs to accept valid URLs, reject invalid input with clear feedback, and keep the list in memory only
-- [ ] T017 [US1] Implement the UI add-subscription flow in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor so the list updates immediately and invalid submissions do not change the current list
-- [ ] T018 [US1] Add the empty and malformed input feedback messaging in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor to reflect the basic validation requirement without introducing feed-checking or production-grade validation
+- [x] T014 [P] [US1] Create the subscription form and state management in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor
+- [x] T015 [P] [US1] Add the frontend subscription client in frontend/RSSFeedReader.UI/Services/SubscriptionClient.cs to post URLs to POST /api/subscriptions
+- [x] T016 [US1] Implement backend add-subscription logic in backend/RSSFeedReader.Api/Services/SubscriptionService.cs and backend/RSSFeedReader.Api/Controllers/SubscriptionsController.cs to accept valid URLs, reject invalid input with clear feedback, and keep the list in memory only
+- [x] T017 [US1] Implement the UI add-subscription flow in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor so the list updates immediately and invalid submissions do not change the current list
+- [x] T018 [US1] Add the empty and malformed input feedback messaging in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor to reflect the basic validation requirement without introducing feed-checking or production-grade validation
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -72,14 +72,14 @@
 
 ### Tests for User Story 2 (MUST be written before implementation)
 
-- [ ] T019 [P] [US2] Add a .NET test for GET/list behavior in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts the list endpoint returns all accepted subscriptions for the current session
-- [ ] T020 [P] [US2] Add a .NET test for multiple valid subscriptions in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts the list preserves all accepted entries and order remains consistent for the session
+- [x] T019 [P] [US2] Add a .NET test for GET/list behavior in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts the list endpoint returns all accepted subscriptions for the current session
+- [x] T020 [P] [US2] Add a .NET test for multiple valid subscriptions in backend/RSSFeedReader.Api.Tests/SubscriptionControllerTests.cs that asserts the list preserves all accepted entries and order remains consistent for the session
 
 ### Implementation for User Story 2
 
-- [ ] T021 [P] [US2] Create the subscription list display in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor to render accepted entries as individual rows
-- [ ] T022 [US2] Add the GET /api/subscriptions data loading path in frontend/RSSFeedReader.UI/Services/SubscriptionClient.cs and wire the page lifecycle to refresh the list
-- [ ] T023 [US2] Implement the empty-state and multi-entry presentation in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor for the no-subscriptions and multiple-subscriptions cases described in the spec
+- [x] T021 [P] [US2] Create the subscription list display in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor to render accepted entries as individual rows
+- [x] T022 [US2] Add the GET /api/subscriptions data loading path in frontend/RSSFeedReader.UI/Services/SubscriptionClient.cs and wire the page lifecycle to refresh the list
+- [x] T023 [US2] Implement the empty-state and multi-entry presentation in frontend/RSSFeedReader.UI/Pages/Subscriptions.razor for the no-subscriptions and multiple-subscriptions cases described in the spec
 
 **Checkpoint**: At this point, User Stories 1 and 2 should both work independently
 
@@ -89,9 +89,9 @@
 
 **Purpose**: Confirm the MVP remains disciplined and does not expand into feed fetching or persistence
 
-- [ ] T024 [P] Review all implementation files to ensure the app stays within MVP scope and avoids feed fetching, parsing, persistence, and production-grade validation beyond the required basic URL checks
-- [ ] T025 Run the .NET test suite for the feature in backend/RSSFeedReader.Api.Tests/ to confirm valid creation, rejection of invalid input, GET/list behavior, and multiple-subscription retention all pass
-- [ ] T026 [P] Update any feature documentation or developer notes needed to describe the limited MVP boundary and the validation rules for invalid URLs
+- [x] T024 [P] Review all implementation files to ensure the app stays within MVP scope and avoids feed fetching, parsing, persistence, and production-grade validation beyond the required basic URL checks
+- [x] T025 Run the .NET test suite for the feature in backend/RSSFeedReader.Api.Tests/ to confirm valid creation, rejection of invalid input, GET/list behavior, and multiple-subscription retention all pass
+- [x] T026 [P] Update any feature documentation or developer notes needed to describe the limited MVP boundary and the validation rules for invalid URLs
 
 ---
 

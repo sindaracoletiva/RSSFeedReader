@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{982C9E94-C883-499B-A3D5-26D4B713CB93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSSFeedReader.Api", "backend\RSSFeedReader.Api\RSSFeedReader.Api.csproj", "{7A321766-57BA-4ADC-9443-4BF114661065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSSFeedReader.Api.Tests", "backend\RSSFeedReader.Api.Tests\RSSFeedReader.Api.Tests.csproj", "{3D6C47C5-F1C9-434E-A4BA-C555EBC7DBC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{0B635639-2FD1-44A8-8847-D936F2ED40D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSSFeedReader.UI", "frontend\RSSFeedReader.UI\RSSFeedReader.UI.csproj", "{7A467203-57A2-4323-BD74-681C7643D4F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A321766-57BA-4ADC-9443-4BF114661065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A321766-57BA-4ADC-9443-4BF114661065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A321766-57BA-4ADC-9443-4BF114661065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A321766-57BA-4ADC-9443-4BF114661065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D6C47C5-F1C9-434E-A4BA-C555EBC7DBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6C47C5-F1C9-434E-A4BA-C555EBC7DBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6C47C5-F1C9-434E-A4BA-C555EBC7DBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6C47C5-F1C9-434E-A4BA-C555EBC7DBC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A467203-57A2-4323-BD74-681C7643D4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A467203-57A2-4323-BD74-681C7643D4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A467203-57A2-4323-BD74-681C7643D4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A467203-57A2-4323-BD74-681C7643D4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A321766-57BA-4ADC-9443-4BF114661065} = {982C9E94-C883-499B-A3D5-26D4B713CB93}
+		{3D6C47C5-F1C9-434E-A4BA-C555EBC7DBC7} = {982C9E94-C883-499B-A3D5-26D4B713CB93}
+		{7A467203-57A2-4323-BD74-681C7643D4F6} = {0B635639-2FD1-44A8-8847-D936F2ED40D7}
+	EndGlobalSection
+EndGlobal
